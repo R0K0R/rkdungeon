@@ -1,5 +1,6 @@
 package net.S_Rko.rkdungeon;
 
+import net.S_Rko.rkdungeon.block.ModBlocks;
 import net.S_Rko.rkdungeon.item.ModItemGroup;
 import net.S_Rko.rkdungeon.item.ModItems;
 import net.fabricmc.api.ModInitializer;
@@ -18,5 +19,6 @@ public class rkdungeon implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModItems.RegisterModItems();
+		ModBlocks.registerBlocks();
 	}
 }

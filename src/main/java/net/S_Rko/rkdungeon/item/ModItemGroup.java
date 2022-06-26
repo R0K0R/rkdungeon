@@ -7,5 +7,5 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 
 public class ModItemGroup {
-    public static final ItemGroup TESTMOD = FabricItemGroupBuilder.build(new Identifier(rkdungeon.MOD_ID, "rkdungeon"), () -> new ItemStack(ModItems.BLACKJEWEL));
+    public static final ItemGroup RKDUNGEON = FabricItemGroupBuilder.build(new Identifier(rkdungeon.MOD_ID, "rkdungeon"), () -> new ItemStack(ModItems.BLACKJEWEL));
 }
