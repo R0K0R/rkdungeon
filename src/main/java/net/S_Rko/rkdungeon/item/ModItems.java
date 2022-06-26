@@ -1,6 +1,7 @@
 package net.S_Rko.rkdungeon.item;
 
 import net.S_Rko.rkdungeon.item.custom.ModAxeItems;
+import net.S_Rko.rkdungeon.item.custom.ModHoeItems;
 import net.S_Rko.rkdungeon.item.custom.ModPickaxeItems;
 import net.S_Rko.rkdungeon.rkdungeon;
 import net.S_Rko.rkdungeon.tool_material.BlackjewelToolMaterial;
@@ -16,6 +17,7 @@ public class ModItems {
     public static final Item BLACKJEWEL_SHOVEL = registerItem("blackjewel_shovel", new ShovelItem(BlackjewelToolMaterial.INSTANCE, 3, -1.5F, new Item.Settings().group(ModItemGroup.TESTMOD)));
     public static final Item BLACKJEWEL_AXE = registerItem("blackjewel_axe", new ModAxeItems(BlackjewelToolMaterial.INSTANCE, 8, -2.5F, new Item.Settings().group(ModItemGroup.TESTMOD)));
     public static final Item BLACKJEWEL_PICKAXE = registerItem("blackjewel_pickaxe", new ModPickaxeItems(BlackjewelToolMaterial.INSTANCE, 4, -2, new Item.Settings().group(ModItemGroup.TESTMOD)));
+    public static final Item BLACKJEWEL_HOE = registerItem("blackjewel_hoe", new ModHoeItems(BlackjewelToolMaterial.INSTANCE, 2, -1, new Item.Settings().group(ModItemGroup.TESTMOD)));
 
 
     private static Item registerItem(String name, Item item) {
