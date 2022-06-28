@@ -5,6 +5,7 @@ import net.S_Rko.rkdungeon.item.custom.ModHoeItems;
 import net.S_Rko.rkdungeon.item.custom.ModPickaxeItems;
 import net.S_Rko.rkdungeon.rkdungeon;
 import net.S_Rko.rkdungeon.tool_material.BlackjewelToolMaterial;
+import net.S_Rko.rkdungeon.tool_material.SapphireToolMaterial;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.*;
@@ -23,6 +24,18 @@ public class ModItems {
     public static final Item BLACKJEWEL_PICKAXE = registerItem("blackjewel_pickaxe", new ModPickaxeItems(BlackjewelToolMaterial.INSTANCE,
             4, -2, new Item.Settings().group(ModItemGroup.RKDUNGEON)));
     public static final Item BLACKJEWEL_HOE = registerItem("blackjewel_hoe", new ModHoeItems(BlackjewelToolMaterial.INSTANCE,
+            2, -1, new Item.Settings().group(ModItemGroup.RKDUNGEON)));
+
+    public static final Item SAPPHIRE = registerItem("sapphire", new Item(new FabricItemSettings().group(ModItemGroup.RKDUNGEON)));
+    public static final Item SAPPHIRE_DAGGER = registerItem("sapphire_dagger", new SwordItem(SapphireToolMaterial.INSTANCE,
+            5, 0, new Item.Settings().group(ModItemGroup.RKDUNGEON)));
+    public static final Item SAPPHIRE_SHOVEL = registerItem("sapphire_shovel", new ShovelItem(SapphireToolMaterial.INSTANCE,
+            3, -1.5F, new Item.Settings().group(ModItemGroup.RKDUNGEON)));
+    public static final Item SAPPHIRE_AXE = registerItem("sapphire_axe", new ModAxeItems(SapphireToolMaterial.INSTANCE,
+            8, -2.5F, new Item.Settings().group(ModItemGroup.RKDUNGEON)));
+    public static final Item SAPPHIRE_PICKAXE = registerItem("sapphire_pickaxe", new ModPickaxeItems(SapphireToolMaterial.INSTANCE,
+            4, -2, new Item.Settings().group(ModItemGroup.RKDUNGEON)));
+    public static final Item SAPPHIRE_HOE = registerItem("sapphire_hoe", new ModHoeItems(SapphireToolMaterial.INSTANCE,
             2, -1, new Item.Settings().group(ModItemGroup.RKDUNGEON)));
 
     public static final Item BLACKJEWEL_HELMET = registerItem("blackjewel_helmet", new ArmorItem(ModArmorMaterial.BLACKJEWEL,
