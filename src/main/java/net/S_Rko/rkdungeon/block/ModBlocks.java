@@ -17,6 +17,12 @@ public class ModBlocks {
     public static final Block BLACKJEWEL_BLOCK = registerBlock("blackjewel_block",
             new Block(FabricBlockSettings.of(Material.METAL).requiresTool().strength(6f))
             , ModItemGroup.RKDUNGEON);
+    public static final Block BLACKJEWEL_ORE = registerBlock("blackjewel_ore",
+            new Block(FabricBlockSettings.of(Material.STONE).requiresTool().strength(5.5f)),
+            ModItemGroup.RKDUNGEON);
+    public static final Block DEEPSLATE_BLACKJEWEL_ORE = registerBlock("deepslate_blackjewel_ore",
+            new Block(FabricBlockSettings.of(Material.STONE).requiresTool().strength(7f)),
+            ModItemGroup.RKDUNGEON);
 
     private static Block registerBlock(String name, Block block, ItemGroup group) {
         registerBlockItems(name, block, group);

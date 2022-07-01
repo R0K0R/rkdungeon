@@ -6,7 +6,8 @@ import net.minecraft.recipe.Ingredient;
 
 public class BlackjewelToolMaterial implements ToolMaterial {
 
-    public static final BlackjewelToolMaterial INSTANCE = new BlackjewelToolMaterial();
+    public static final BlackjewelToolMaterial INSTANCE
+            = new BlackjewelToolMaterial();
 
     @Override
     public int getDurability() {

@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "rkdungeon:blackjewel_block"
+    "rkdungeon:blackjewel_block",
+    "rkdungeon:blackjewel_ore",
+    "rkdungeon:deepslate_blackjewel_ore"
   ]
 }

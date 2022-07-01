@@ -10,7 +10,7 @@ public class SapphireToolMaterial implements ToolMaterial {
 
     @Override
     public int getDurability() {
-        return 1631;
+        return 1561;
     }
 
     @Override
@@ -30,7 +30,7 @@ public class SapphireToolMaterial implements ToolMaterial {
 
     @Override
     public int getEnchantability() {
-        return 20;
+        return 18;
     }
 
     @Override

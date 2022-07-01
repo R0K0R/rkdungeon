@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "rkdungeon:block/blackjewel_ore"
+  }
+}
