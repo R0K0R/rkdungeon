@@ -15,12 +15,15 @@
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/rkdungeon/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
       "net.S_Rko.rkdungeon.rkdungeon"
+    ],
+    "client": [
+      "net.S_Rko.rkdungeon.rkdungeonClient"
     ]
   },
   "mixins": [

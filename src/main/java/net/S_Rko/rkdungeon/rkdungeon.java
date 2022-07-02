@@ -4,6 +4,7 @@ import net.S_Rko.rkdungeon.block.ModBlocks;
 import net.S_Rko.rkdungeon.item.ModItemGroup;
 import net.S_Rko.rkdungeon.item.ModItems;
 import net.S_Rko.rkdungeon.util.ModLootTableModifiers;
+import net.S_Rko.rkdungeon.util.ModRegistries;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,5 +23,6 @@ public class rkdungeon implements ModInitializer {
 		ModItems.RegisterModItems();
 		ModBlocks.registerBlocks();
 		ModLootTableModifiers.modifyLootTables();
+		ModRegistries.registerModStuffs();
 	}
 }
