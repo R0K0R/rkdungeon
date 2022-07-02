@@ -21,7 +21,7 @@ public class ModLootTableModifiers {
         LootTableLoadingCallback.EVENT.register(((resourceManager, manager, id, supplier, setter) -> {
             //check for grass block loot table.
             if(COAL_ORE_ID.equals(id)) {
-                // Adds Black jewel to the grass loot table.
+                // Adds Black jewel to the coal ore loot table.
                 FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.05f)) // Drops 5% of the time
@@ -30,7 +30,7 @@ public class ModLootTableModifiers {
                 supplier.withPool(poolBuilder.build());
             }
             if(DEEPSLATE_COAL_ORE_ID.equals(id)) {
-                // Adds Black jewel to the grass loot table.
+                // Adds Black jewel to the deepslate coal ore loot table.
                 FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.05f)) // Drops 5% of the time
