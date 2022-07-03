@@ -24,5 +24,7 @@
   "block.rkdungeon.blackjewel_ore": "Blackjewel Ore",
   "block.rkdungeon.deepslate_blackjewel_ore": "Deepslate Blackjewel Ore",
 
-  "itemGroup.rkdungeon.rkdungeon": "Rko and kornq's Dungeon mod tab"
+  "itemGroup.rkdungeon.rkdungeon": "Rko and kornq's Dungeon mod tab",
+
+  "entity.rkdungeon.raccoon": "Raccoon"
 }
