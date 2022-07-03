@@ -29,11 +29,13 @@ public class ModItems {
 
     public static final Item SAPPHIRE = registerItem("sapphire", new Item(new FabricItemSettings().group(ModItemGroup.RKDUNGEON)));
     public static final Item SAPPHIRE_DAGGER = registerItem("sapphire_dagger", new SwordItem(SapphireToolMaterial.INSTANCE,
-            5, 0, new Item.Settings().group(ModItemGroup.RKDUNGEON)));
+            4, 0, new Item.Settings().group(ModItemGroup.RKDUNGEON)));
+    public static final Item SAPPHIRE_SWORD = registerItem("sapphire_sword", new SwordItem(SapphireToolMaterial.INSTANCE,
+            5, -2.4F, new Item.Settings().group(ModItemGroup.RKDUNGEON)));
     public static final Item SAPPHIRE_SHOVEL = registerItem("sapphire_shovel", new ShovelItem(SapphireToolMaterial.INSTANCE,
             3, -1.5F, new Item.Settings().group(ModItemGroup.RKDUNGEON)));
     public static final Item SAPPHIRE_AXE = registerItem("sapphire_axe", new ModAxeItems(SapphireToolMaterial.INSTANCE,
-            8, -2.5F, new Item.Settings().group(ModItemGroup.RKDUNGEON)));
+            8, -3, new Item.Settings().group(ModItemGroup.RKDUNGEON)));
     public static final Item SAPPHIRE_PICKAXE = registerItem("sapphire_pickaxe", new ModPickaxeItems(SapphireToolMaterial.INSTANCE,
             4, -2, new Item.Settings().group(ModItemGroup.RKDUNGEON)));
     public static final Item SAPPHIRE_HOE = registerItem("sapphire_hoe", new ModHoeItems(SapphireToolMaterial.INSTANCE,
@@ -47,6 +49,16 @@ public class ModItems {
             EquipmentSlot.LEGS, new FabricItemSettings().group(ModItemGroup.RKDUNGEON)));
     public static final Item BLACKJEWEL_BOOTS = registerItem("blackjewel_boots", new ArmorItem(ModArmorMaterial.BLACKJEWEL,
             EquipmentSlot.FEET, new FabricItemSettings().group(ModItemGroup.RKDUNGEON)));
+
+    public static final Item SAPPHIRE_HELMET = registerItem("sapphire_helmet", new ArmorItem(ModArmorMaterial.SAPPHIRE,
+            EquipmentSlot.HEAD, new FabricItemSettings().group(ModItemGroup.RKDUNGEON)));
+    public static final Item SAPPHIRE_CHESTPLATE = registerItem("sapphire_chestplate", new ArmorItem(ModArmorMaterial.SAPPHIRE,
+            EquipmentSlot.CHEST, new FabricItemSettings().group(ModItemGroup.RKDUNGEON)));
+    public static final Item SAPPHIRE_LEGGINGS = registerItem("sapphire_leggings", new ArmorItem(ModArmorMaterial.SAPPHIRE,
+            EquipmentSlot.LEGS, new FabricItemSettings().group(ModItemGroup.RKDUNGEON)));
+    public static final Item SAPPHIRE_BOOTS = registerItem("sapphire_boots", new ArmorItem(ModArmorMaterial.SAPPHIRE,
+            EquipmentSlot.FEET, new FabricItemSettings().group(ModItemGroup.RKDUNGEON)));
+
     public static final Item RACCOON_SPAWN_EGG = registerItem("raccoon_spawn_egg", new SpawnEggItem(ModEntities.RACCOON,
             0x948e8d, 0x3b3635, new FabricItemSettings().group(ModItemGroup.RKDUNGEON).maxCount(1)));
 

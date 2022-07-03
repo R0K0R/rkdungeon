@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "blackjewel",
+  "pattern": [
+    "###",
+    "# #"
+  ],
+  "key": {
+    "#": {
+      "item": "rkdungeon:sapphire"
+    }
+  },
+  "result": {
+    "item": "rkdungeon:sapphire_helmet"
+  }
+}

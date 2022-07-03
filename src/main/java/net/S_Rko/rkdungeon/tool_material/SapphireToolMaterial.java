@@ -25,7 +25,7 @@ public class SapphireToolMaterial implements ToolMaterial {
 
     @Override
     public int getMiningLevel() {
-        return 3;
+        return 2;
     }
 
     @Override

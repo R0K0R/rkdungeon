@@ -10,9 +10,12 @@ import net.minecraft.util.Lazy;
 import java.util.function.Supplier;
 
 public enum ModArmorMaterial implements ArmorMaterial {
-    BLACKJEWEL("blackjewel", 30, new int[]{3, 6, 7, 3}, 14,
+    BLACKJEWEL("blackjewel", 30, new int[]{3, 6, 7, 3}, 15,
             SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 1.5f, 0.05f,
-            () -> Ingredient.ofItems(ModItems.BLACKJEWEL));
+            () -> Ingredient.ofItems(ModItems.BLACKJEWEL)),
+    SAPPHIRE("sapphire", 30, new int[]{3, 7, 7, 3}, 17,
+            SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 1.5f, 0.075f,
+            () -> Ingredient.ofItems(ModItems.SAPPHIRE));
 
     private static final int[] BASE_DURABILITY;
     private final String name;
