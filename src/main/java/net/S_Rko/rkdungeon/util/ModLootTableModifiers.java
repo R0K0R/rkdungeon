@@ -1,8 +1,8 @@
 package net.S_Rko.rkdungeon.util;
 
-import net.fabricmc.fabric.api.loot.v1.FabricLootPoolBuilder;
-import net.fabricmc.fabric.api.loot.v1.event.LootTableLoadingCallback;
 import net.S_Rko.rkdungeon.item.ModItems;
+import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
+import net.minecraft.loot.LootPool;
 import net.minecraft.loot.condition.RandomChanceLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.function.SetCountLootFunction;
@@ -16,28 +16,24 @@ public class ModLootTableModifiers {
             = new Identifier("minecraft", "blocks/coal_ore");
     private static final Identifier DEEPSLATE_COAL_ORE_ID
             = new Identifier("minecraft", "blocks/deepslate_coal_ore");
-
     public static void modifyLootTables() {
-        LootTableLoadingCallback.EVENT.register(((resourceManager, manager, id, supplier, setter) -> {
-            //check for grass block loot table.
+        LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
             if(COAL_ORE_ID.equals(id)) {
-                // Adds Black jewel to the coal ore loot table.
-                FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()
+                LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.05f)) // Drops 5% of the time
+                        .conditionally(RandomChanceLootCondition.builder(0.01f)) // Drops 1% of the time
                         .with(ItemEntry.builder(ModItems.BLACKJEWEL))
-                        .withFunction(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
-                supplier.withPool(poolBuilder.build());
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 2.0f)).build());
+                tableBuilder.pool(poolBuilder.build());
             }
             if(DEEPSLATE_COAL_ORE_ID.equals(id)) {
-                // Adds Black jewel to the deepslate coal ore loot table.
-                FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()
+                LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.05f)) // Drops 5% of the time
+                        .conditionally(RandomChanceLootCondition.builder(0.01f)) // Drops 1% of the time
                         .with(ItemEntry.builder(ModItems.BLACKJEWEL))
-                        .withFunction(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
-                supplier.withPool(poolBuilder.build());
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 2.0f)).build());
+                tableBuilder.pool(poolBuilder.build());
             }
-        }));
+        });
     }
 }

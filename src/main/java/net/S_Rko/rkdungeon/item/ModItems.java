@@ -1,6 +1,5 @@
 package net.S_Rko.rkdungeon.item;
 
-import net.S_Rko.rkdungeon.entity.ModEntities;
 import net.S_Rko.rkdungeon.item.custom.ModAxeItems;
 import net.S_Rko.rkdungeon.item.custom.ModHoeItems;
 import net.S_Rko.rkdungeon.item.custom.ModPickaxeItems;
@@ -58,9 +57,6 @@ public class ModItems {
             EquipmentSlot.LEGS, new FabricItemSettings().group(ModItemGroup.RKDUNGEON)));
     public static final Item SAPPHIRE_BOOTS = registerItem("sapphire_boots", new ArmorItem(ModArmorMaterial.SAPPHIRE,
             EquipmentSlot.FEET, new FabricItemSettings().group(ModItemGroup.RKDUNGEON)));
-
-    public static final Item RACCOON_SPAWN_EGG = registerItem("raccoon_spawn_egg", new SpawnEggItem(ModEntities.RACCOON,
-            0x948e8d, 0x3b3635, new FabricItemSettings().group(ModItemGroup.RKDUNGEON).maxCount(1)));
 
 
     private static Item registerItem(String name, Item item) {
