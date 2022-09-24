@@ -15,7 +15,10 @@ public enum ModArmorMaterial implements ArmorMaterial {
             ModArmorMaterial::getBlackjewel),
     SAPPHIRE("sapphire", 30, new int[]{3, 7, 7, 3}, 17,
             SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 1.5f, 0.075f,
-            ModArmorMaterial::getSapphire);
+            ModArmorMaterial::getSapphire),
+    RUBY("ruby", 30, new int[]{2, 4, 5, 2}, 9,
+    SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0f, 0f,
+    ModArmorMaterial::getRuby);
 
     private static final int[] BASE_DURABILITY;
     private final String name;
@@ -44,6 +47,10 @@ public enum ModArmorMaterial implements ArmorMaterial {
 
     private static Ingredient getSapphire() {
         return Ingredient.ofItems(ModItems.SAPPHIRE);
+    }
+
+    private static Ingredient getRuby() {
+        return Ingredient.ofItems(ModItems.RUBY);
     }
 
     @Override

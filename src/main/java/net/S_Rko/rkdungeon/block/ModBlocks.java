@@ -6,10 +6,12 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
+import net.minecraft.block.OreBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.util.registry.Registry;
 
 public class ModBlocks {
@@ -17,12 +19,18 @@ public class ModBlocks {
     public static final Block BLACKJEWEL_BLOCK = registerBlock("blackjewel_block",
             new Block(FabricBlockSettings.of(Material.METAL).requiresTool().strength(6f))
             , ModItemGroup.RKDUNGEON);
+    public static final Block SAPPHIRE_ORE = registerBlock("sapphire_ore",
+            new OreBlock(FabricBlockSettings.of(Material.STONE).requiresTool().strength(5f),
+            UniformIntProvider.create(3, 7)), ModItemGroup.RKDUNGEON);
+    public static final Block RUBY_ORE = registerBlock("ruby_ore",
+            new OreBlock(FabricBlockSettings.of(Material.STONE).requiresTool().strength(5f),
+            UniformIntProvider.create(3, 7)) , ModItemGroup.RKDUNGEON);
     public static final Block BLACKJEWEL_ORE = registerBlock("blackjewel_ore",
-            new Block(FabricBlockSettings.of(Material.STONE).requiresTool().strength(5.5f)),
-            ModItemGroup.RKDUNGEON);
+            new OreBlock(FabricBlockSettings.of(Material.STONE).requiresTool().strength(5.5f),
+            UniformIntProvider.create(3, 7)) ,ModItemGroup.RKDUNGEON);
     public static final Block DEEPSLATE_BLACKJEWEL_ORE = registerBlock("deepslate_blackjewel_ore",
-            new Block(FabricBlockSettings.of(Material.STONE).requiresTool().strength(7f)),
-            ModItemGroup.RKDUNGEON);
+            new OreBlock(FabricBlockSettings.of(Material.STONE).requiresTool().strength(7f),
+            UniformIntProvider.create(3, 7)) ,ModItemGroup.RKDUNGEON);
 
     private static Block registerBlock(String name, Block block, ItemGroup group) {
         registerBlockItems(name, block, group);

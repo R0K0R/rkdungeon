@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-
+    "rkdungeon:sapphire_ore",
+    "rkdungeon:ruby_ore"
   ]
 }

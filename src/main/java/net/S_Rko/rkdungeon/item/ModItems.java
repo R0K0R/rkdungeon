@@ -5,6 +5,7 @@ import net.S_Rko.rkdungeon.item.custom.ModHoeItems;
 import net.S_Rko.rkdungeon.item.custom.ModPickaxeItems;
 import net.S_Rko.rkdungeon.rkdungeon;
 import net.S_Rko.rkdungeon.tool_material.BlackjewelToolMaterial;
+import net.S_Rko.rkdungeon.tool_material.RubyToolMaterial;
 import net.S_Rko.rkdungeon.tool_material.SapphireToolMaterial;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.entity.EquipmentSlot;
@@ -40,6 +41,20 @@ public class ModItems {
     public static final Item SAPPHIRE_HOE = registerItem("sapphire_hoe", new ModHoeItems(SapphireToolMaterial.INSTANCE,
             2, -1, new Item.Settings().group(ModItemGroup.RKDUNGEON)));
 
+    public static final Item RUBY = registerItem("ruby", new Item(new FabricItemSettings().group(ModItemGroup.RKDUNGEON)));
+    public static final Item RUBY_DAGGER = registerItem("ruby_dagger", new SwordItem(RubyToolMaterial.INSTANCE,
+            5, 0, new Item.Settings().group(ModItemGroup.RKDUNGEON)));
+    public static final Item RUBY_SWORD = registerItem("ruby_sword", new SwordItem(RubyToolMaterial.INSTANCE,
+            6, -2.4F, new Item.Settings().group(ModItemGroup.RKDUNGEON)));
+    public static final Item RUBY_SHOVEL = registerItem("ruby_shovel", new ShovelItem(RubyToolMaterial.INSTANCE,
+            3, -1.5F, new Item.Settings().group(ModItemGroup.RKDUNGEON)));
+    public static final Item RUBY_AXE = registerItem("ruby_axe", new ModAxeItems(RubyToolMaterial.INSTANCE,
+            8, -3, new Item.Settings().group(ModItemGroup.RKDUNGEON)));
+    public static final Item RUBY_PICKAXE = registerItem("ruby_pickaxe", new ModPickaxeItems(RubyToolMaterial.INSTANCE,
+            4, -2, new Item.Settings().group(ModItemGroup.RKDUNGEON)));
+    public static final Item RUBY_HOE = registerItem("ruby_hoe", new ModHoeItems(RubyToolMaterial.INSTANCE,
+            2, -1, new Item.Settings().group(ModItemGroup.RKDUNGEON)));
+
     public static final Item BLACKJEWEL_HELMET = registerItem("blackjewel_helmet", new ArmorItem(ModArmorMaterial.BLACKJEWEL,
             EquipmentSlot.HEAD, new FabricItemSettings().group(ModItemGroup.RKDUNGEON)));
     public static final Item BLACKJEWEL_CHESTPLATE = registerItem("blackjewel_chestplate", new ArmorItem(ModArmorMaterial.BLACKJEWEL,
@@ -56,6 +71,15 @@ public class ModItems {
     public static final Item SAPPHIRE_LEGGINGS = registerItem("sapphire_leggings", new ArmorItem(ModArmorMaterial.SAPPHIRE,
             EquipmentSlot.LEGS, new FabricItemSettings().group(ModItemGroup.RKDUNGEON)));
     public static final Item SAPPHIRE_BOOTS = registerItem("sapphire_boots", new ArmorItem(ModArmorMaterial.SAPPHIRE,
+            EquipmentSlot.FEET, new FabricItemSettings().group(ModItemGroup.RKDUNGEON)));
+
+    public static final Item RUBY_HELMET = registerItem("ruby_helmet", new ArmorItem(ModArmorMaterial.RUBY,
+            EquipmentSlot.HEAD, new FabricItemSettings().group(ModItemGroup.RKDUNGEON)));
+    public static final Item RUBY_CHESTPLATE = registerItem("ruby_chestplate", new ArmorItem(ModArmorMaterial.RUBY,
+            EquipmentSlot.CHEST, new FabricItemSettings().group(ModItemGroup.RKDUNGEON)));
+    public static final Item RUBY_LEGGINGS = registerItem("ruby_leggings", new ArmorItem(ModArmorMaterial.RUBY,
+            EquipmentSlot.LEGS, new FabricItemSettings().group(ModItemGroup.RKDUNGEON)));
+    public static final Item RUBY_BOOTS = registerItem("ruby_boots", new ArmorItem(ModArmorMaterial.RUBY,
             EquipmentSlot.FEET, new FabricItemSettings().group(ModItemGroup.RKDUNGEON)));
 
 

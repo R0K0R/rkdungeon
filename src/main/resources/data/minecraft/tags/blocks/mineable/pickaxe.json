@@ -3,6 +3,8 @@
   "values": [
     "rkdungeon:blackjewel_block",
     "rkdungeon:blackjewel_ore",
+    "rkdungeon:sapphire_ore",
+    "rkdungeon:ruby_ore",
     "rkdungeon:deepslate_blackjewel_ore"
   ]
 }

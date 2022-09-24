@@ -1,5 +1,7 @@
 {
   "item.rkdungeon.blackjewel": "Blackjewel",
+  "item.rkdungeon.sapphire": "Sapphire",
+  "item.rkdungeon.ruby": "Ruby",
 
   "item.rkdungeon.blackjewel_shovel": "Blackjewel Shovel",
   "item.rkdungeon.blackjewel_dagger": "Blackjewel Dagger",
@@ -7,14 +9,19 @@
   "item.rkdungeon.blackjewel_pickaxe": "Blackjewel Pickaxe",
   "item.rkdungeon.blackjewel_hoe": "Blackjewel Hoe",
 
-  "item.rkdungeon.raccoon_spawn_egg": "Raccoon Spawn Egg",
-
   "item.rkdungeon.sapphire_shovel": "Sapphire Shovel",
   "item.rkdungeon.sapphire_dagger": "Sapphire Dagger",
   "item.rkdungeon.sapphire_sword": "Sapphire Sword",
   "item.rkdungeon.sapphire_axe": "Sapphire Axe",
   "item.rkdungeon.sapphire_pickaxe": "Sapphire Pickaxe",
   "item.rkdungeon.sapphire_hoe": "Sapphire Hoe",
+
+  "item.rkdungeon.ruby_shovel": "Ruby Shovel",
+  "item.rkdungeon.ruby_dagger": "Ruby Dagger",
+  "item.rkdungeon.ruby_sword": "Ruby Sword",
+  "item.rkdungeon.ruby_axe": "Ruby Axe",
+  "item.rkdungeon.ruby_pickaxe": "Ruby Pickaxe",
+  "item.rkdungeon.ruby_hoe": "Ruby Hoe",
 
   "item.rkdungeon.blackjewel_helmet": "Blackjewel Helmet",
   "item.rkdungeon.blackjewel_chestplate": "Blackjewel Chestplate",
@@ -26,11 +33,16 @@
   "item.rkdungeon.sapphire_leggings": "Sapphire Leggings",
   "item.rkdungeon.sapphire_boots": "Sapphire Boots",
 
+  "item.rkdungeon.ruby_helmet": "Ruby Helmet",
+  "item.rkdungeon.ruby_chestplate": "Ruby Chestplate",
+  "item.rkdungeon.ruby_leggings": "Ruby Leggings",
+  "item.rkdungeon.ruby_boots": "Ruby Boots",
+
   "block.rkdungeon.blackjewel_block": "Block of Blackjewel",
   "block.rkdungeon.blackjewel_ore": "Blackjewel Ore",
   "block.rkdungeon.deepslate_blackjewel_ore": "Deepslate Blackjewel Ore",
+  "block.rkdungeon.sapphire_ore": "Sapphire Ore",
+  "block.rkdungeon.ruby_ore": "Ruby Ore",
 
-  "itemGroup.rkdungeon.rkdungeon": "Rko and kornq's Dungeon mod tab",
-
-  "entity.rkdungeon.raccoon": "Raccoon"
+  "itemGroup.rkdungeon.rkdungeon": "Rko and kornq's Dungeon mod tab"
 }
