@@ -44,5 +44,11 @@
   "block.rkdungeon.sapphire_ore": "Sapphire Ore",
   "block.rkdungeon.ruby_ore": "Ruby Ore",
 
+  "item.rkdungeon.grass_sword": "Grass Sword",
+  "item.rkdungeon.grass_sword_spring": "Grass Sword [Spring]",
+  "item.rkdungeon.grass_sword_summer": "Grass Sword [Summer]",
+  "item.rkdungeon.grass_sword_autumn": "Grass Sword [Autumn]",
+  "item.rkdungeon.grass_sword_winter": "Grass Sword [Winter]",
+
   "itemGroup.rkdungeon.rkdungeon": "Rko and kornq's Dungeon mod tab"
 }

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "rkdungeon:item/grass_sword_winter"
+  }
+}

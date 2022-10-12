@@ -4,9 +4,7 @@ import net.S_Rko.rkdungeon.item.custom.ModAxeItems;
 import net.S_Rko.rkdungeon.item.custom.ModHoeItems;
 import net.S_Rko.rkdungeon.item.custom.ModPickaxeItems;
 import net.S_Rko.rkdungeon.rkdungeon;
-import net.S_Rko.rkdungeon.tool_material.BlackjewelToolMaterial;
-import net.S_Rko.rkdungeon.tool_material.RubyToolMaterial;
-import net.S_Rko.rkdungeon.tool_material.SapphireToolMaterial;
+import net.S_Rko.rkdungeon.tool_material.*;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.*;
@@ -82,6 +80,11 @@ public class ModItems {
     public static final Item RUBY_BOOTS = registerItem("ruby_boots", new ArmorItem(ModArmorMaterial.RUBY,
             EquipmentSlot.FEET, new FabricItemSettings().group(ModItemGroup.RKDUNGEON)));
 
+    public static final Item GRASS_SWORD = registerItem("grass_sword", new SwordItem(GrassToolMaterial.INSTANCE, 3, -2.4f, new FabricItemSettings().group(ModItemGroup.RKDUNGEON)));
+    public static final Item GRASS_SWORD_SPRING = registerItem("grass_sword_spring", new SwordItem(SpringGrassToolMaterial.INSTANCE, -1, -2.4f, new FabricItemSettings()));
+    public static final Item GRASS_SWORD_SUMMER = registerItem("grass_sword_summer", new SwordItem(SummerGrassToolMaterial.INSTANCE, 6, -2.4f, new FabricItemSettings()));
+    public static final Item GRASS_SWORD_AUTUMN = registerItem("grass_sword_autumn", new SwordItem(AutumnGrassToolMaterial.INSTANCE, 5, -2.4f, new FabricItemSettings()));
+    public static final Item GRASS_SWORD_WINTER = registerItem("grass_sword_winter", new SwordItem(WinterGrassToolMaterial.INSTANCE, 5, -2.4f, new FabricItemSettings()));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(rkdungeon.MOD_ID, name), item);
