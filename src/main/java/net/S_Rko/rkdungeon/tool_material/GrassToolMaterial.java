@@ -11,7 +11,7 @@ public class GrassToolMaterial implements ToolMaterial {
 
     @Override
     public int getDurability() {
-        return 131;
+        return 600;
     }
 
     @Override

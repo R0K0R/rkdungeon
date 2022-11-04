@@ -1,5 +1,6 @@
 package net.S_Rko.rkdungeon.item;
 
+import net.S_Rko.rkdungeon.item.custom.FireSwordItems;
 import net.S_Rko.rkdungeon.item.custom.ModAxeItems;
 import net.S_Rko.rkdungeon.item.custom.ModHoeItems;
 import net.S_Rko.rkdungeon.item.custom.ModPickaxeItems;
@@ -81,10 +82,14 @@ public class ModItems {
             EquipmentSlot.FEET, new FabricItemSettings().group(ModItemGroup.RKDUNGEON)));
 
     public static final Item GRASS_SWORD = registerItem("grass_sword", new SwordItem(GrassToolMaterial.INSTANCE, 3, -2.4f, new FabricItemSettings().group(ModItemGroup.RKDUNGEON)));
-    public static final Item GRASS_SWORD_SPRING = registerItem("grass_sword_spring", new SwordItem(SpringGrassToolMaterial.INSTANCE, -1, -2.4f, new FabricItemSettings()));
-    public static final Item GRASS_SWORD_SUMMER = registerItem("grass_sword_summer", new SwordItem(SummerGrassToolMaterial.INSTANCE, 6, -2.4f, new FabricItemSettings()));
-    public static final Item GRASS_SWORD_AUTUMN = registerItem("grass_sword_autumn", new SwordItem(AutumnGrassToolMaterial.INSTANCE, 5, -2.4f, new FabricItemSettings()));
-    public static final Item GRASS_SWORD_WINTER = registerItem("grass_sword_winter", new SwordItem(WinterGrassToolMaterial.INSTANCE, 5, -2.4f, new FabricItemSettings()));
+    public static final Item GRASS_SWORD_SPRING = registerItem("grass_sword_spring", new SwordItem(GrassToolMaterial.INSTANCE, -1, -2.4f, new FabricItemSettings()));
+    public static final Item GRASS_SWORD_SUMMER = registerItem("grass_sword_summer", new SwordItem(GrassToolMaterial.INSTANCE, 6, -2.4f, new FabricItemSettings()));
+    public static final Item GRASS_SWORD_AUTUMN = registerItem("grass_sword_autumn", new SwordItem(GrassToolMaterial.INSTANCE, 5, -2.4f, new FabricItemSettings()));
+    public static final Item GRASS_SWORD_WINTER = registerItem("grass_sword_winter", new SwordItem(GrassToolMaterial.INSTANCE, 5, -2.4f, new FabricItemSettings()));
+
+    public static final Item FIRE_ENERGY = registerItem("fire_energy", new Item(new FabricItemSettings().group(ModItemGroup.RKDUNGEON)));
+    public static final Item FIRE_SWORD = registerItem("fire_sword", new FireSwordItems(FireToolMaterial.INSTANCE, 6, -2.4f, new FabricItemSettings().group(ModItemGroup.RKDUNGEON)));
+
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(rkdungeon.MOD_ID, name), item);

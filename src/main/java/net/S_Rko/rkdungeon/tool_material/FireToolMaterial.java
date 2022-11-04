@@ -4,14 +4,14 @@ import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 
-public class AutumnGrassToolMaterial implements ToolMaterial {
+public class FireToolMaterial implements ToolMaterial {
 
-    public static final AutumnGrassToolMaterial INSTANCE
-            = new AutumnGrassToolMaterial();
+    public static final GrassToolMaterial INSTANCE
+            = new GrassToolMaterial();
 
     @Override
     public int getDurability() {
-        return 675;
+        return 600;
     }
 
     @Override

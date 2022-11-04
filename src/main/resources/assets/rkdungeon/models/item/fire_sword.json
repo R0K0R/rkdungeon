@@ -1,0 +1,14 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "rkdungeon:item/fire_sword_on"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "off": 1
+      },
+      "model": "rkdungeon:item/fire_sword_off"
+    }
+  ]
+}
