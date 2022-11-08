@@ -1,6 +1,7 @@
 package net.S_Rko.rkdungeon;
 
 import net.S_Rko.rkdungeon.block.ModBlocks;
+import net.S_Rko.rkdungeon.effect.ModEffects;
 import net.S_Rko.rkdungeon.item.ModItemGroup;
 import net.S_Rko.rkdungeon.item.ModItems;
 import net.S_Rko.rkdungeon.util.ModLootTableModifiers;
@@ -24,5 +25,6 @@ public class rkdungeon implements ModInitializer {
 		ModBlocks.registerBlocks();
 		ModLootTableModifiers.modifyLootTables();
 		ModRegistries.registerModStuffs();
+		ModEffects.registerEffects();
 	}
 }

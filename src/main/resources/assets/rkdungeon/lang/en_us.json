@@ -1,4 +1,6 @@
 {
+  "effect.rkdungeon.wet": "Wet",
+
   "item.rkdungeon.blackjewel": "Blackjewel",
   "item.rkdungeon.sapphire": "Sapphire",
   "item.rkdungeon.ruby": "Ruby",
@@ -52,6 +54,8 @@
 
   "item.rkdungeon.fire_sword": "Fire Sword",
   "item.rkdungeon.fire_energy": "Fire Energy",
+
+  "item.rkdungeon.upgraded_trident": "Upgraded Trident",
 
   "itemGroup.rkdungeon.rkdungeon": "Rko and kornq's Dungeon mod tab"
 }

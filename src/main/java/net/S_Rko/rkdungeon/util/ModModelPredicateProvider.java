@@ -14,8 +14,8 @@ public class ModModelPredicateProvider {
     }
 
     public static void registerFireSword(Item fireSword) {
-        register(fireSword, new Identifier("off"), (stack, world, entity, seed) -> {
-            return FireSwordItems.onMainHand(stack) && FireSwordItems.isUsable(stack) ? 0.0F : 1.0F;
+        register(fireSword, new Identifier("on"), (stack, world, entity, seed) -> {
+            return !(FireSwordItems.onHand(stack) && FireSwordItems.isUsable(stack)) ? 0.0F : 1.0F;
         });
     }
 }

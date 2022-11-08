@@ -38,8 +38,8 @@ public class FireSwordItems extends SwordItem {
         super(toolMaterial, attackDamage, attackSpeed, settings);
     }
 
-    public static boolean onMainHand(ItemStack stack) {
-        return MinecraftClient.getInstance().player.getMainHandStack() == stack;
+    public static boolean onHand(ItemStack stack) {
+        return MinecraftClient.getInstance().player.getMainHandStack() == stack || MinecraftClient.getInstance().player.getOffHandStack() == stack;
     }
 
     public static boolean isUsable(ItemStack stack) {

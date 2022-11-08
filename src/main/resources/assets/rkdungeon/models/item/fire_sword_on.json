@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "rkdungeon:item/fire_sword_off"
+    "layer0": "rkdungeon:item/fire_sword_on"
   }
 }

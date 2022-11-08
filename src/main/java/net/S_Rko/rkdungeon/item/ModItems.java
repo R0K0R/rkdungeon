@@ -1,9 +1,6 @@
 package net.S_Rko.rkdungeon.item;
 
-import net.S_Rko.rkdungeon.item.custom.FireSwordItems;
-import net.S_Rko.rkdungeon.item.custom.ModAxeItems;
-import net.S_Rko.rkdungeon.item.custom.ModHoeItems;
-import net.S_Rko.rkdungeon.item.custom.ModPickaxeItems;
+import net.S_Rko.rkdungeon.item.custom.*;
 import net.S_Rko.rkdungeon.rkdungeon;
 import net.S_Rko.rkdungeon.tool_material.*;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -89,6 +86,8 @@ public class ModItems {
 
     public static final Item FIRE_ENERGY = registerItem("fire_energy", new Item(new FabricItemSettings().group(ModItemGroup.RKDUNGEON)));
     public static final Item FIRE_SWORD = registerItem("fire_sword", new FireSwordItems(FireToolMaterial.INSTANCE, 6, -2.4f, new FabricItemSettings().group(ModItemGroup.RKDUNGEON)));
+
+    public static final Item UPGRADED_TRIDENT = registerItem("upgraded_trident", new UpgradeTridentItems(UpgradedTridentToolMaterial.INSTANCE, 9, -2.9f, new FabricItemSettings().group(ModItemGroup.RKDUNGEON).maxCount(1)));
 
 
     private static Item registerItem(String name, Item item) {
