@@ -1,25 +1,25 @@
 package net.S_Rko.rkdungeon.item.custom;
 
-import com.google.common.collect.ImmutableMultimap;
-import com.google.common.collect.Multimap;
+import net.S_Rko.rkdungeon.entity.UpgradedTridentEntity;
 import net.minecraft.block.BlockState;
+import net.minecraft.client.item.TooltipContext;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.MovementType;
-import net.minecraft.entity.attribute.EntityAttribute;
-import net.minecraft.entity.attribute.EntityAttributeModifier;
-import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
-import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.PersistentProjectileEntity;
 import net.minecraft.entity.projectile.TridentEntity;
-import net.minecraft.item.*;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.SwordItem;
+import net.minecraft.item.ToolMaterial;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.stat.Stats;
+import net.minecraft.text.Text;
+import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.UseAction;
@@ -27,8 +27,9 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
+import org.jetbrains.annotations.Nullable;
 
-import java.util.Map;
+import java.util.List;
 
 public class UpgradeTridentItems extends SwordItem {
     public UpgradeTridentItems(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings) {
@@ -37,7 +38,6 @@ public class UpgradeTridentItems extends SwordItem {
 
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         int DoubleChance = (int) (Math.random() % 99);
-        Iterable<ItemStack> ArmorItems = target.getArmorItems();
 
         stack.damage(1, attacker, (e) -> {
             e.sendEquipmentBreakStatus(EquipmentSlot.MAINHAND);
@@ -76,7 +76,7 @@ public class UpgradeTridentItems extends SwordItem {
                             p.sendToolBreakStatus(user.getActiveHand());
                         });
                         if (j == 0) {
-                            TridentEntity tridentEntity = new TridentEntity(world, playerEntity, stack);
+                            TridentEntity tridentEntity = new UpgradedTridentEntity(world, playerEntity, stack);
                             tridentEntity.setVelocity(playerEntity, playerEntity.getPitch(), playerEntity.getYaw(), 0.0F, 2.5F + (float)j * 0.5F, 1.0F);
                             if (playerEntity.getAbilities().creativeMode) {
                                 tridentEntity.pickupType = PersistentProjectileEntity.PickupPermission.CREATIVE_ONLY;
@@ -150,5 +150,11 @@ public class UpgradeTridentItems extends SwordItem {
 
     public int getEnchantability() {
         return 1;
+    }
+
+    @Override
+    public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
+        tooltip.add(Text.literal("Gives 12% of chance to rust (give extra damage) on other player's armor").formatted(Formatting.AQUA));
+        tooltip.add(Text.literal("WARNING: it won't apply on throwing attack").formatted(Formatting.AQUA));
     }
 }
