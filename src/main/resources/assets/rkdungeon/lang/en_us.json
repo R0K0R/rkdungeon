@@ -1,5 +1,7 @@
 {
-  "effect.rkdungeon.wet": "Wet",
+  "effect.rkdungeon.electric_shock": "Electric Shock",
+
+  "enchantment.rkdungeon.insulator": "Insulator",
 
   "item.rkdungeon.blackjewel": "Blackjewel",
   "item.rkdungeon.sapphire": "Sapphire",
@@ -55,7 +57,9 @@
   "item.rkdungeon.fire_sword": "Fire Sword",
   "item.rkdungeon.fire_energy": "Fire Energy",
 
-  "item.rkdungeon.upgraded_trident": "Upgraded Trident",
+  "item.rkdungeon.spark_sword": "Spark Sword",
+
+  "item.rkdungeon.upgraded_trident": "Marine Trident",
 
   "itemGroup.rkdungeon.rkdungeon": "Rko and kornq's Dungeon mod tab"
 }

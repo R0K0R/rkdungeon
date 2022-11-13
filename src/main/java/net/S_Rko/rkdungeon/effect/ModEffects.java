@@ -7,14 +7,14 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class ModEffects {
-    public static StatusEffect WET;
+    public static StatusEffect ELECTRIC_SHOCK;
 
     public static StatusEffect registerStatusEffect(String name) {
         return Registry.register(Registry.STATUS_EFFECT, new Identifier(rkdungeon.MOD_ID, name),
-                new WetEffect(StatusEffectCategory.HARMFUL, 3124687));
+                new ElectricShockEffect(StatusEffectCategory.HARMFUL, 16777045));
     }
 
     public static void registerEffects() {
-        WET = registerStatusEffect("wet");
+        ELECTRIC_SHOCK = registerStatusEffect("electric_shock");
     }
 }

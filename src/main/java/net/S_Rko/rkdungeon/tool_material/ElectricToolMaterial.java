@@ -1,11 +1,10 @@
 package net.S_Rko.rkdungeon.tool_material;
 
-import net.S_Rko.rkdungeon.item.ModItems;
 import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 
-public class FireToolMaterial implements ToolMaterial {
+public class ElectricToolMaterial implements ToolMaterial {
 
     public static final GrassToolMaterial INSTANCE
             = new GrassToolMaterial();
@@ -37,6 +36,6 @@ public class FireToolMaterial implements ToolMaterial {
 
     @Override
     public Ingredient getRepairIngredient() {
-        return Ingredient.ofItems(ModItems.FIRE_ENERGY);
+        return null;
     }
 }

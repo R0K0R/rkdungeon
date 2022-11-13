@@ -87,6 +87,8 @@ public class ModItems {
     public static final Item FIRE_ENERGY = registerItem("fire_energy", new Item(new FabricItemSettings().group(ModItemGroup.RKDUNGEON)));
     public static final Item FIRE_SWORD = registerItem("fire_sword", new FireSwordItems(FireToolMaterial.INSTANCE, 6, -2.4f, new FabricItemSettings().group(ModItemGroup.RKDUNGEON)));
 
+    public static final Item SPARK_SWORD = registerItem("spark_sword", new SparkSwordItems(ElectricToolMaterial.INSTANCE, 6, -2.4f, new FabricItemSettings().group(ModItemGroup.RKDUNGEON)));
+
     public static final Item UPGRADED_TRIDENT = registerItem("upgraded_trident", new UpgradeTridentItems(UpgradedTridentToolMaterial.INSTANCE, 9, -2.9f, new FabricItemSettings().group(ModItemGroup.RKDUNGEON).maxCount(1)));
 
 
