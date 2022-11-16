@@ -1,6 +1,5 @@
 package net.S_Rko.rkdungeon.item.custom;
 
-import net.S_Rko.rkdungeon.entity.UpgradedTridentEntity;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -10,6 +9,7 @@ import net.minecraft.entity.MovementType;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.PersistentProjectileEntity;
+import net.minecraft.entity.projectile.ProjectileEntity;
 import net.minecraft.entity.projectile.TridentEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
@@ -76,7 +76,7 @@ public class UpgradeTridentItems extends SwordItem {
                             p.sendToolBreakStatus(user.getActiveHand());
                         });
                         if (j == 0) {
-                            TridentEntity tridentEntity = new UpgradedTridentEntity(world, playerEntity, stack);
+                            TridentEntity tridentEntity = new TridentEntity(world, playerEntity, stack);
                             tridentEntity.setVelocity(playerEntity, playerEntity.getPitch(), playerEntity.getYaw(), 0.0F, 2.5F + (float)j * 0.5F, 1.0F);
                             if (playerEntity.getAbilities().creativeMode) {
                                 tridentEntity.pickupType = PersistentProjectileEntity.PickupPermission.CREATIVE_ONLY;
