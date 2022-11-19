@@ -67,7 +67,6 @@ public class SparkSwordItems extends SwordItem {
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         if(Screen.hasShiftDown()) {
             tooltip.add(Text.literal("Hit: gives 3 ticks of electric shock").formatted(Formatting.AQUA));
-            tooltip.add(Text.literal("WARNING: You can't use shield with this item").formatted(Formatting.AQUA));
         } else {
             tooltip.add(Text.literal("Press Shift for More Information").formatted(Formatting.YELLOW));
         }
