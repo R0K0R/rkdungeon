@@ -39,11 +39,11 @@ public class SparkSwordItems extends SwordItem {
         stack.damage(1, attacker, (e) -> {
             e.sendEquipmentBreakStatus(EquipmentSlot.MAINHAND);
         });
-        target.addStatusEffect(new StatusEffectInstance(ModEffects.ELECTRIC_SHOCK, 7), attacker);
+        if (!target.getEquippedStack(EquipmentSlot.CHEST).getEnchantments().contains(ModEnchantments.INSULATOR)){
+            target.addStatusEffect(new StatusEffectInstance(ModEffects.ELECTRIC_SHOCK, 3), attacker);
+        }
         return true;
     }
-
-    int DurabilityCount;
 
     public SparkSwordItems(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings) {
         super(toolMaterial, attackDamage, attackSpeed, settings);
@@ -51,22 +51,6 @@ public class SparkSwordItems extends SwordItem {
 
     public boolean canMine(BlockState state, World world, BlockPos pos, PlayerEntity miner) {
         return false;
-    }
-
-    public ActionResult useOnEntity(ItemStack stack, PlayerEntity user, LivingEntity entity, Hand hand) {
-            user.playSound(SoundEvents.ITEM_SPYGLASS_USE, 100000, 1.9f);
-            entity.playSound(SoundEvents.ITEM_SPYGLASS_USE, 100000, 1.9f);
-            if (!entity.getEquippedStack(EquipmentSlot.CHEST).getEnchantments().contains(ModEnchantments.INSULATOR)){
-                entity.addStatusEffect(new StatusEffectInstance(ModEffects.ELECTRIC_SHOCK, 7), user);
-            }
-            if (DurabilityCount >= 10){
-                stack.damage(1, user, (p) -> {
-                    p.sendToolBreakStatus(hand);
-                });
-                DurabilityCount = 0;
-            }
-            DurabilityCount ++;
-            return ActionResult.PASS;
     }
 
     public int getMaxUseTime(ItemStack stack) {
@@ -82,8 +66,7 @@ public class SparkSwordItems extends SwordItem {
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         if(Screen.hasShiftDown()) {
-            tooltip.add(Text.literal("Hit: gives 7 ticks of electric shock").formatted(Formatting.AQUA));
-            tooltip.add(Text.literal("Use on Entity: TASER GUN").formatted(Formatting.AQUA));
+            tooltip.add(Text.literal("Hit: gives 3 ticks of electric shock").formatted(Formatting.AQUA));
             tooltip.add(Text.literal("WARNING: You can't use shield with this item").formatted(Formatting.AQUA));
         } else {
             tooltip.add(Text.literal("Press Shift for More Information").formatted(Formatting.YELLOW));
