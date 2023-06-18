@@ -2,41 +2,26 @@
   "schemaVersion": 1,
   "id": "rkdungeon",
   "version": "${version}",
-
-  "name": "Rko and kornq's dungeon mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
-  "authors": [
-    "S_Rko",
-    "kornq"
-  ],
+  "name": "rkdungeon",
+  "description": "",
+  "authors": [],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "repo": "https://github.com/injoy/rkdungeon"
   },
-
-  "license": "CC0-1.0",
+  "license": "All-Rights-Reserved",
   "icon": "assets/rkdungeon/icon.png",
-
   "environment": "*",
   "entrypoints": {
-    "main": [
-      "net.S_Rko.rkdungeon.rkdungeon"
-    ],
     "client": [
-      "net.S_Rko.rkdungeon.rkdungeonClient"
+      "org.airbow.rkdungeon.client.RkdungeonClient"
+    ],
+    "main": [
+      "org.airbow.rkdungeon.Rkdungeon"
     ]
   },
-  "mixins": [
-    "rkdungeon.mixins.json"
-  ],
-
   "depends": {
-    "fabricloader": ">=0.14.6",
+    "fabricloader": ">=0.14.21",
     "fabric": "*",
-    "minecraft": "~1.19",
-    "java": ">=17"
-  },
-  "suggests": {
-    "another-mod": "*"
+    "minecraft": "1.20.1"
   }
 }

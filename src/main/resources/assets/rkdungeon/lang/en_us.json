@@ -58,8 +58,9 @@
   "item.rkdungeon.fire_energy": "Fire Energy",
 
   "item.rkdungeon.spark_sword": "Spark Sword",
+  "item.rkdungeon.electric_arrow": "Electric Arrow",
 
   "item.rkdungeon.upgraded_trident": "Marine Trident",
 
-  "itemGroup.rkdungeon.rkdungeon": "Rko and kornq's Dungeon mod tab"
+  "itemGroup.rkdungeon": "RKDUNGEON"
 }
